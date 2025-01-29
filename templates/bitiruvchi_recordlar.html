@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Bitiruvchi Talabalarning Recordlari</title>
+    </head>
+    <body>
+        <h1>Bitiruvchi Talabalarning Recordlari</h1>
+        <ul>
+            {% for record in recordlar %}
+                <li>{{ record.talaba.ism }} - {{ record.kitob.nom }} ({{ record.olingan_sana }})</li>
+            {% endfor %}
+        </ul>
+    </body>
+    </html>

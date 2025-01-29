@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kutubxona | Muallif</title>
+</head>
+<body>
+<h1>Mualliflar ro'yxati</h1>
+<a href="/">Bosh sahifa</a>
+<hr>
+  {% for muallif in mualliflar %}
+    <p>{{ forloop.counter }}. <a href="/mualliflar/{{ muallif.id}}/">{{ muallif.ism }} </a>({{ muallif.kitob_soni }} ta kitobi bor)</p>
+  {% endfor %}
+</body>
+</html>

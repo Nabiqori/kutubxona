@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | Kitoblar</title>
+</head>
+<body>
+    <h1>Kitoblar ro'yxati</h1>
+
+    <form>
+        <input type="text" name="search" value="{{ search|default:'' }}">
+        <button>Qidirish</button>
+    </form>
+
+    <form>
+        <label>Janr:</label>
+        <select name="janr">
+            <option value="all" {% if not janr_query or janr_query == 'all' %} selected {% endif %}>Barchasi</option>
+            {% for janr in janrlar %}
+                <option value="{{ janr }}" {% if janr_query == janr %} selected {% endif %}>
+                    {{ janr }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <button>Filter</button>
+    </form>
+
+    <a href="/">Bosh sahifa</a>
+    <hr>
+
+    {% for kitob in kitoblar %}
+        <p>{{ forloop.counter }}.
+            <a href="/kitoblar/{{ kitob.id }}/">{{ kitob.nom }}</a> - {{ kitob.janr }} ({{ kitob.sahifa }} sahifa)
+        </p>
+    {% endfor %}
+</body>
+</html>

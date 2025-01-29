@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mualliflar</title>
+</head>
+<body>
+    <h1>Tirik mualliflar</h1>
+    <ul>
+        {% for muallif in mualliflar %}
+            <li>{{ muallif.ism }} ({{ muallif.davlat }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

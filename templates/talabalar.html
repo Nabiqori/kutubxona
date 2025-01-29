@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | Talabalar</title>
+</head>
+<body>
+    <h1>Talabalar ro'yxati</h1>
+
+    <form>
+        <input type="text" name="search" value="{{ search|default:'' }}">
+        <button>Qidirish</button>
+    </form>
+
+    <form>
+        <label>Kurs:</label>
+        <select name="kurs">
+            <option value="all" {% if not kurs_query == 'all' %} selected {% endif %}>Barchasi</option>
+            {% for kurs in kurslar %}
+                <option value="{{ kurs }}" {% if kurs_query|stringformat:"s" == kurs|stringformat:"s" %} selected {% endif %}>
+                    {{ kurs }}-kurs
+                </option>
+            {% endfor %}
+        </select>
+
+        <label>Guruh:</label>
+        <select name="guruh">
+            <option value="all" {% if not guruh_query == 'all' %} selected {% endif %}>Barchasi</option>
+            {% for guruh in guruhlar %}
+                <option value="{{ guruh }}" {% if guruh_query == guruh %} selected {% endif %}>{{ guruh }}</option>
+            {% endfor %}
+        </select>
+
+        <button>Filter</button>
+
+    </form>
+
+    <a href="/">Bosh sahifa</a>
+    <hr>
+
+    {% for talaba in talabalar %}
+        <p>{{ forloop.counter }}.
+            <a href="/talabalar/{{ talaba.id }}/">{{ talaba.ism }}</a>
+            <a href="/talabalar/{{ talaba.id }}/o'chirish/confirm/">
+                <button>O'chirish</button>
+            </a>
+        </p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kam Kitobli Mualliflar</title>
+</head>
+<body>
+<h1>Kitob soni 10 tadan kam bo‘lgan mualliflar</h1>
+<hr>
+{% for muallif in mualliflar %}
+<h2>{{ muallif.ism }}</h2>
+{% endfor %}
+<a href="/">Bosh sahifa</a>
+</body>
+</html>

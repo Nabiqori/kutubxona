@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | Mualliflar Top 3</title>
+</head>
+<body>
+<h1>Top 3 Mualliflar</h1>
+<hr>
+{% for muallif in mualliflar %}
+<p>{{ forloop.counter }}. {{ muallif.ism }}</p>
+{% endfor %}
+<a href="/">Bosh sahifa</a>
+</body>
+</html>
