@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<form method="post">
+    {% csrf_token %}
+    <label>Nom:</label>
+    <input type="text" name="nom" required>
+
+    <label>Annotatsiya:</label>
+    <input type="text" name="annotatsiya">
+
+    <label>Sahifa:</label>
+    <input type="number" name="sahifa" required>
+
+    <label>Janr:</label>
+    <input type="text" name="janr" required>
+
+    <label>Muallif:</label>
+    <select name="muallif_id">
+        {% for muallif in mualliflar %}
+        <option value="{{ muallif.id }}">{{ muallif.ism }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Saqlash</button>
+</form>

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kutubxona | kuitubxonachilar</title>
 </head>
 <body>
-$END$
+<h1>Kutubxonachilar royxati</h1>
+<a href="/kutubxonachi-qoshish"><button>kutubxonachi qoshish</button></a>
+<hr>
+{% for kutubxonachi in kutubxonachilar %}
+    <p>{{ forloop.counter }}. {{ kutubxonachi.ism }}</p>
+  {% endfor %}
+<a href="/">Bosh sahifa</a>
 </body>
 </html>

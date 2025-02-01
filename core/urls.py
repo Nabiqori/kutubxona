@@ -44,4 +44,8 @@ urlpatterns = [
     path('bitiruvchi-recordlar/', bitiruvchi_recordlar, name='bitiruvchi_recordlar'),
     path('kitob/<int:pk>/o\'chirish/',kitob_delete_view),
     path('kitob/<int:pk>/o\'chirish/confirm/',kitob_delete_confirm_view),
+    path('kitob-qoshish/',kitob_qoshish_view),
+    path('record-qoshish/',record_qoshish_view),
+    path('kutubxonachi-qoshish/',kutubxonachi_qoshish_view),
+    path('kutubxonachilar/', kutubxonachilar_view),
 ]

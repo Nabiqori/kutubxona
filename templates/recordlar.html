@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Recordlar royxati</h1>
+<a href="/record-qoshish"><button>Record qoshish</button></a>
 <hr>
 {% for record in recordlar %}
     <p>{{ forloop.counter }}. <a href="/recordlar/{{ record.id}}/">{{ record.talaba }} </a> (olingan sana: {{record.olingan_sana}})</p>

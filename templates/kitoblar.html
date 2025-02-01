@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <title>Kutubxona | Kitoblar</title>
@@ -7,12 +7,13 @@
 <body>
     <h1>Kitoblar ro'yxati</h1>
 
-    <form>
+    <form method="get">
         <input type="text" name="search" value="{{ search|default:'' }}">
-        <button>Qidirish</button>
+        <button type="submit">Qidirish</button>
     </form>
+    <a href="/kitob-qoshish/"><button>Kitob qo‘shish</button></a>
 
-    <form>
+    <form method="get">
         <label>Janr:</label>
         <select name="janr">
             <option value="all" {% if not janr_query or janr_query == 'all' %} selected {% endif %}>Barchasi</option>
@@ -22,8 +23,7 @@
                 </option>
             {% endfor %}
         </select>
-
-        <button>Filter</button>
+        <button type="submit">Filter</button>
     </form>
 
     <a href="/">Bosh sahifa</a>
