@@ -31,7 +31,10 @@
 
     {% for kitob in kitoblar %}
         <p>{{ forloop.counter }}.
-            <a href="/kitoblar/{{ kitob.id }}/">{{ kitob.nom }}</a> - {{ kitob.janr }} ({{ kitob.sahifa }} sahifa)
+            <a href="/kitob/{{ kitob.id }}/">{{ kitob.nom }}</a> - {{ kitob.janr }} ({{ kitob.sahifa }} sahifa)
+            <a href="/kitoblar/{{ kitob.id }}/tahrirlash/">
+                <button>Tahrirlash</button>
+            </a>
         </p>
     {% endfor %}
 </body>

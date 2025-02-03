@@ -10,6 +10,9 @@
 <hr>
 {% for record in recordlar %}
     <p>{{ forloop.counter }}. <a href="/recordlar/{{ record.id}}/">{{ record.talaba }} </a> (olingan sana: {{record.olingan_sana}})</p>
+    <a href="/recordlar/{{ record.id }}/tahrirlash/">
+                <button>Tahrirlash</button>
+            </a>
   {% endfor %}
 <a href="/">Bosh sahifa</a>
 </body>

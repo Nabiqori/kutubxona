@@ -52,6 +52,9 @@
     {% for talaba in talabalar %}
         <p>{{ forloop.counter}}.
             <a href="/talabalar/{{ talaba.id }}/">{{ talaba.ism }}</a>
+            <a href="/talabalar/{{ talaba.id }}/tahrirlash/">
+                <button>Tahrirlash</button>
+            </a>
             <a href="/talabalar/{{ talaba.id }}/o'chirish/tasdiqlash/">
                 <button>O'chirish</button>
             </a>

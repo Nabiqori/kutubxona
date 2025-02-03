@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Bosh sahifa</a>
+    <hr>
+    <form method="post">
+    {% csrf_token %}
+    <label>Qaytarilgan sana:</label>
+        <input type="datetime-local" name="qaytarilgan_sana" value="{{ record.qaytarilgan_sana }}"  >
+    <label>Qaytardi:</label>
+        <input type="checkbox" >
+    <button>Saqlash</button>
+</form>
+</body>
+</html>

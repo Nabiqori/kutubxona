@@ -10,6 +10,10 @@
 <hr>
 {% for kutubxonachi in kutubxonachilar %}
     <p>{{ forloop.counter }}. {{ kutubxonachi.ism }}</p>
+    <a href="/kutubxonachilar/{{ kutubxonachi.id }}/tahrirlash/">
+                <button>Tahrirlash</button>
+            </a>
+        </p>
   {% endfor %}
 <a href="/">Bosh sahifa</a>
 </body>
