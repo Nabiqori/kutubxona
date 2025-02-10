@@ -1,33 +1,6 @@
 <form method="post">
     {% csrf_token %}
-    <label>Olingan san:</label>
-    <input type="datetime-local" name="olingan_san" required>
-
-    <label>Qayatarilgan sana:</label>
-    <input type="datetime-local" name="qaytarilgan_sana">
-
-    <label>Qaytardi:</label>
-    <input type="checkbox" name="qaytardi">
-
-    </select>
-    <label>Kutubxonachi:</label>
-    <select name="kutubxonachi_id">
-        {% for kutubxonachi in kutubxonachilar %}
-        <option value="{{kutubxonachi.id }}">{{ kutubxonachi.ism }}</option>
-        {% endfor %}
-    </select>
-    <label>Kitob:</label>
-    <select name="kitob_id">
-        {% for kitob in kitoblar %}
-        <option value="{{kitob.id }}">{{ kitob.nom }}</option>
-        {% endfor %}
-    </select>
-    <label>Talaba:</label>
-    <select name="talaba_id">
-        {% for talaba in talabalar %}
-        <option value="{{talaba.id }}">{{ talaba.ism }}</option>
-        {% endfor %}
-    </select>
+    {{ form }}
 
 
     <button type="submit">Saqlash</button>

@@ -11,21 +11,7 @@
     <hr>
     <form method="post">
     {% csrf_token %}
-    <label>Ism:</label>
-        <input type="text" name="ism" value="{{ muallif.ism }}" required>
-    <label>Davlat:</label>
-        <input type="text" name="davlat" value="{{ muallif.davlat }}" required>
-    <label>kitob soni:</label>
-        <input type="number" name="kitob_soni" value="{{ muallif.kitob_soni }}" >
-    <label>Tugilgan sana:</label>
-        <input type="date" name="t_sana" value="{{ muallif.t_sana }}" >
-    <label>Jins:</label>
-        <select name="jins">
-            <option>Erkak</option>
-            <option>Ayol</option>
-        </select>
-    <label>Tirik:</label>
-        <input type="checkbox" name="tirik">
+        {{form}}
     <button>Saqlash</button>
 </form>
 </body>

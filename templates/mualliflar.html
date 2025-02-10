@@ -9,21 +9,7 @@
 <a href="/">Bosh sahifa</a>
 <form method="post">
     {% csrf_token %}
-    <label>Ism:</label>
-        <input type="text" name="ism" required>
-    <label>Davlat:</label>
-        <input type="text" name="davlat" required>
-    <label>kitob soni:</label>
-        <input type="number" name="kitob_soni" >
-    <label>Tugilgan sana:</label>
-        <input type="date" name="t_sana" >
-    <label>Jins:</label>
-        <select name="jins">
-            <option>Erkak</option>
-            <option>Ayol</option>
-        </select>
-    <label>Tirik:</label>
-        <input type="checkbox" name="tirik">
+    {{ form }}
     <button>Saqlash</button>
 </form>
 <hr>

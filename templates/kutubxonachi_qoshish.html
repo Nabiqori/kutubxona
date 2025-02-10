@@ -1,16 +1,8 @@
 <form method="post">
     {% csrf_token %}
-    <label>ism:</label>
-    <input type="text" name="ism" required>
-    <label>Ish vaqti:</label>
-    <select name="ish_vaqti" required>
-        <option >08:00 - 13:00</option>
-        <option >13:00 - 18:00</option>
-
-    </select>
+    {{ form }}
 
     <button type="submit">Qo‘shish</button>
 
 
-    <button type="submit">Saqlash</button>
 </form>

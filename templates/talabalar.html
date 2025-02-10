@@ -12,18 +12,7 @@
     </form>
     <form method="post">
         {% csrf_token %}
-        <label>Ism:</label>
-        <input type="text" name="ism" required>
-        <label>Kurs:</label>
-        <input type="number" name="kurs" value="1">
-        <br><br>
-        <label>Guruh:</label>
-        <input type="text" name="guruh" required>
-        <label>Yosh:</label>
-        <input type="number" name="yosh" required>
-        <br><br>
-        <label>Kitob soni:</label>
-        <input type="number" name="kitob_soni" value="0">
+        {{ form }}
         <button>Saqlash</button>
     </form>
     <form>
